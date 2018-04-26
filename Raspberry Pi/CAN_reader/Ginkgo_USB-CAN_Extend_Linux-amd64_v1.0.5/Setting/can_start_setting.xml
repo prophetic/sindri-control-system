@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<StartSettings>
+    <DevType>0</DevType>
+    <WorkMode>1</WorkMode>
+    <CANIndex>2</CANIndex>
+    <BaudRate>5</BaudRate>
+    <RelayMode>0</RelayMode>
+</StartSettings>
