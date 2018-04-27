@@ -2,7 +2,7 @@
 
   ******************************************************************************
   * @file     : CANTest.cpp
-  * @Copyright: ViewTool 
+  * @Copyright: ViewTool
   * @Revision : ver 1.0
   * @Date     : 2014/12/29 9:27
   * @brief    : CANTest demo
@@ -12,7 +12,7 @@
   * Copyright 2009-2014, ViewTool
   * http://www.viewtool.com/
   * All Rights Reserved
-  * 
+  *
   ******************************************************************************
   */
 
@@ -28,7 +28,7 @@
 #include <stdio.h>
 
 #define	CAN_MODE_LOOP_BACK		0
-#define	CAN_SEND_DATA			1
+#define	CAN_SEND_DATA			0
 #define CAN_GET_BOARD_INFO		1
 #define CAN_READ_DATA			1
 #define CAN_CALLBACK_READ_DATA	1
@@ -66,7 +66,7 @@ void WINAPI GetDataCallback(uint32_t DevIndex,uint32_t CANIndex,uint32_t Len)
 
 int main(void)
 {
-    int DevNum,Status;  
+    int DevNum,Status;
     //Scan device
     DevNum = VCI_ScanDevice(1);
     if(DevNum > 0){
@@ -111,10 +111,10 @@ int main(void)
 #endif
     //CAN baud rate = 36MHz/(CAN_BRP)/(CAN_SJW+CAN_BS1+CAN_BS2)
     //1Mbps
-    CAN_InitEx.CAN_BRP = 9;//6;
-    CAN_InitEx.CAN_BS1 = 5;//3;
-    CAN_InitEx.CAN_BS2 = 2;//2;
-    CAN_InitEx.CAN_SJW = 1;
+    CAN_InitEx.CAN_BRP = 4;//6;
+    CAN_InitEx.CAN_BS1 = 1;//3;
+    CAN_InitEx.CAN_BS2 = 1;//2;
+    CAN_InitEx.CAN_SJW = 12;
 
     CAN_InitEx.CAN_NART = 0;
     CAN_InitEx.CAN_RFLM = 0;
@@ -265,7 +265,7 @@ int main(void)
 		int ReadDataNum;
 		int DataNum = VCI_GetReceiveNum(VCI_USBCAN2, 0, 0);
 		VCI_CAN_OBJ	*pCAN_ReceiveData = (VCI_CAN_OBJ *)malloc(DataNum*sizeof(VCI_CAN_OBJ));
-		
+
         printf("DataNum: %i\n", DataNum);
         if((DataNum > 0)&&(pCAN_ReceiveData != NULL)){
 			ReadDataNum = VCI_Receive(VCI_USBCAN2, 0, 0, pCAN_ReceiveData, DataNum);

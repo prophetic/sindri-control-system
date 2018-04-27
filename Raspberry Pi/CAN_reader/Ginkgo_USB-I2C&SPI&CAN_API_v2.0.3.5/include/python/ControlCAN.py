@@ -9,8 +9,9 @@ More Infomation:www.viewtool.com
 """
 from ctypes import *
 import platform
+
 # Compatible with other CAN adapter datatype
-class VCI_BOARD_INFO(Structure):  
+class VCI_BOARD_INFO(Structure):
 	_fields_ = [
 		("hw_Version", c_ushort),	# hardware version, in hex format, for example: 0x0100 present version is 1.00
 		("fw_Version", c_ushort),	# firmware version in hex format
@@ -23,7 +24,7 @@ class VCI_BOARD_INFO(Structure):
 		("Reserved",c_ushort*4)
 	];
 # Compatible with other CAN adapter datatype
-class VCI_BOARD_INFO_EX(Structure):  
+class VCI_BOARD_INFO_EX(Structure):
 	_fields_ = [
 		("ProductName", c_ubyte*32),	# hardware name,for example: "Ginkgo-CAN-Adaptor\0"(note: include string null end'\0')
 		("FirmwareVersion", c_ubyte*4),	# firmware version
@@ -31,7 +32,7 @@ class VCI_BOARD_INFO_EX(Structure):
 		("SerialNumber",c_ubyte*12)	# adatper serial number
 	];
 # Definition of CAN frame
-class VCI_CAN_OBJ(Structure):  
+class VCI_CAN_OBJ(Structure):
 	_fields_ = [("ID", c_uint),	# Frame ID
 		("TimeStamp", c_uint),	# timestamp of the frame arriving,started from initialization of CAN controller
 		("TimeFlag", c_byte),	# if using timestamp. 1: use TimeStamp, 0:not use. TimeFlag and TimeStamp is available when the frame is recived frame
@@ -43,7 +44,7 @@ class VCI_CAN_OBJ(Structure):
 		("Reserved",c_byte*3)	# reserved
 	];
 # definition of CAN controller status
-class VCI_CAN_STATUS(Structure):  
+class VCI_CAN_STATUS(Structure):
 	_fields_ = [("ErrInterrupt", c_byte),	# interrupt record,will be cleared while reading
 		("regMode", c_byte),		# CAN controller mode register
 		("regStatus", c_byte),		# CAN controller status register
@@ -55,7 +56,7 @@ class VCI_CAN_STATUS(Structure):
 		("regESR",c_uint),              # CAN controller status register
 		("regTSR",c_uint),              # CAN controller status register
 		("BufferSize",c_uint),		# CAN controller receive buffer size
-		("Reserved",c_uint),		# 
+		("Reserved",c_uint),		#
 	];
 
 # definition of error data type
@@ -68,17 +69,17 @@ class VCI_ERR_INFO(Structure):
 class VCI_INIT_CONFIG(Structure):
 	_fields_ = [("AccCode",c_uint),	        # ACC code (for verification)
 		("AccMask",c_uint),		# Mask code
-		("Reserved",c_uint),		# 
+		("Reserved",c_uint),		#
 		("Filter",c_byte),		# filter type.0: double filter,1: single filter
 		("Timing0",c_byte),		# Timer 0
 		("Timing1",c_byte),		# Timer 1
 		("Mode",c_byte)
 		];
 # Definition of CAN initialization data type
-class VCI_INIT_CONFIG_EX(Structure):  
+class VCI_INIT_CONFIG_EX(Structure):
 	_fields_ = [("CAN_BRP", c_uint),# range: 1~1024, CAN baudrate = 36MHz/(CAN_BRP)/(CAN_SJW+CAN_BS1+CAN_BS2)
-		("CAN_SJW", c_byte),	# range: 1~4  
-		("CAN_BS1", c_byte),	# range: 1~16      
+		("CAN_SJW", c_byte),	# range: 1~4
+		("CAN_BS1", c_byte),	# range: 1~16
 		("CAN_BS2",c_byte),     # range: 1~8
 		("CAN_Mode",c_byte),	# CAN working mode. 0: normal,1: loopback,2: silent,3: silent loopback
 		("CAN_ABOM",c_byte),	# auto off line management. 0: prohibit,1: enable
@@ -89,7 +90,7 @@ class VCI_INIT_CONFIG_EX(Structure):
 		("Reserved",c_uint)	# reserved
 		];
 # definition of CAN filter setting
-class VCI_FILTER_CONFIG(Structure):  
+class VCI_FILTER_CONFIG(Structure):
 	_fields_ = [("Enable", c_byte),	        # filter enable. 1: enable,0: disable
 		("FilterIndex", c_byte),	# filter index. range: 0~13
 		("FilterMode", c_byte),	        # filter mode.0: mask bit,1: id list
@@ -282,7 +283,3 @@ def VCI_Receive(DevType,DevIndex,CANIndex,pReceive,Len,WaitTime):
         print('%s: %s'%(args.__class__.__name__, args))
         exit()
 	return GinkgoLib.VCI_Receive(c_uint(DevType),c_uint(DevIndex),c_uint(CANIndex),pReceive,c_uint(Len),c_uint(WaitTime))
-
-
-
-

@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from functools import reduce
 
-df = pd.read_csv("CAN_DATA/data.csv")
+df = pd.read_csv("../CAN_DATA/take1.csv")
 
 # print(df)
 
@@ -54,4 +54,4 @@ for index,row in df.iterrows():
     # n_df.loc[index] = parsed_d
 
 
-n_df.to_csv("CAN_DATA/Parsed_data.csv", index=False, delimiter="\n")
+n_df.to_csv("Parsed_data.csv", index=False, delimiter="\n")
