@@ -88,6 +88,28 @@ class O2_sensor
         int _pin;
 };
 
+// Thermistor
+// Class Definition
+
+class Thermistor
+{
+    public:
+        Thermocouple(int pin, float R);
+        unsigned long time;
+        float current_reading = 0.0;
+
+        void begin();
+        void update_sensor();
+        void log_data();
+
+    private:
+        int _pin;
+        float _R;
+        float _A = 0.24929;
+        float _B = -0.049126;
+        float _C = 0.00020905;
+}
+
 // Thermocouples
 // Class Definition
 class Thermocouple

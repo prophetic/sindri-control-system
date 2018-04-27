@@ -168,8 +168,49 @@ void O2_sensor::log_data()
 
 }
 
+// Thermistors
+Thermistor::Thermistor(int pin, float R)
+{
+    _pin = pin;
+    _R   = R; 
+}
+
+void Thermistor::begin()
+{
+    time = millis();
+    
+    Serial.print("Thermistor at pin: ");
+    Serial.print(_pin);
+    Serial.print(" Initialized!\n");
+}
+
+void Thermistor::update_sensor()
+{
+    analog_in  = analogRead(_pin);
+    measured_v = analog_in*(5.0/1023.0);
+
+    float current_R = _R*((5.0-measured_v)/measured_v);
+
+    float inv_T = A + B*math.log(current_R) + math.pow(C*math.log(current_R),3);
+    current_reading = 1/inv_T;
+    
+    time = millis();
+}
+
+void Thermistor::log_data()
+{
+    Serial.print(_pin);
+    Serial.print(",");
+    Serial.print(current_reading);
+    Serial.print(",");
+    Serial.print(time);
+    Serial.print("\n");
+}
+
+}
+
 // Thermocouples
-Thermocouple::Thermocouple(int DO, int CLK, int CS):
+void Thermocouple::Thermocouple(int DO, int CLK, int CS):
     thermocouple(CLK, CS, DO)
 {
     _CS = CS;
