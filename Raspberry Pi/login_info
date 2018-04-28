@@ -1,4 +1,11 @@
+# Login Info
 Username: pi
 Password: SINDRI2018
 
+
+# SSH Info
+static_ip: 18.189.51.215 
+
+command: 
+ssh pi@static_ip     #say 'yes', then put password above in
 
