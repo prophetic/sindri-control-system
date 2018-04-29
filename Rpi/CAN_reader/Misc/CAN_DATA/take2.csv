@@ -1,0 +1,173 @@
+Index,Direction,Type,Format,Frame ID,Length,Datas(Hex),Status,Time
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:06.571.100
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B6 00 00 ,Success,00:00:06.572.200
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8B 00 00 ,Success,00:00:06.573.200
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:06.574.200
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:06.671.100
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B8 00 00 ,Success,00:00:06.672.300
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CD 09 60 0E 8A 00 00 ,Success,00:00:06.673.200
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:06.674.300
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:06.771.200
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B4 00 00 ,Success,00:00:06.772.300
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 88 00 00 ,Success,00:00:06.773.300
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:06.774.300
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:06.871.200
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B7 00 00 ,Success,00:00:06.872.300
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8A 00 00 ,Success,00:00:06.873.300
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:06.874.300
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:06.971.200
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B8 00 00 ,Success,00:00:06.972.300
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8E 00 00 ,Success,00:00:06.973.300
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:06.974.300
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.071.200
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B9 00 00 ,Success,00:00:07.072.300
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8E 00 00 ,Success,00:00:07.073.300
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.074.300
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.171.200
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B8 00 00 ,Success,00:00:07.172.400
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8A 00 00 ,Success,00:00:07.173.300
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.174.400
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.271.300
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 BB 00 00 ,Success,00:00:07.272.400
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 8A 00 00 ,Success,00:00:07.273.400
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.274.400
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.371.300
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B8 00 00 ,Success,00:00:07.372.400
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 88 00 00 ,Success,00:00:07.373.400
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.374.400
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.471.300
+CAN2,Receive,Extended,Data,0x0A010002,8,12 63 00 00 11 B8 00 00 ,Success,00:00:07.472.400
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 88 00 00 ,Success,00:00:07.473.400
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.474.400
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.571.300
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B8 00 00 ,Success,00:00:07.572.400
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 85 00 00 ,Success,00:00:07.573.400
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.574.400
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.671.300
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B8 00 00 ,Success,00:00:07.672.400
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 85 00 00 ,Success,00:00:07.673.400
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.674.400
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.771.300
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B7 00 00 ,Success,00:00:07.772.500
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CD 09 60 0E 87 00 00 ,Success,00:00:07.773.500
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.774.500
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.871.400
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B7 00 00 ,Success,00:00:07.872.500
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CD 09 60 0E 82 00 00 ,Success,00:00:07.873.500
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.874.500
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:07.971.400
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B9 00 00 ,Success,00:00:07.972.500
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 87 00 00 ,Success,00:00:07.973.500
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:07.974.500
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.071.400
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 BA 00 00 ,Success,00:00:08.072.500
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 8B 00 00 ,Success,00:00:08.073.500
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.074.500
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.171.400
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B6 00 00 ,Success,00:00:08.172.500
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 84 00 00 ,Success,00:00:08.173.500
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.174.500
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.271.400
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B6 00 00 ,Success,00:00:08.272.600
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 88 00 00 ,Success,00:00:08.273.600
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.274.600
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.371.500
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B7 00 00 ,Success,00:00:08.372.600
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 8A 00 00 ,Success,00:00:08.373.600
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.374.600
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.471.500
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B6 00 00 ,Success,00:00:08.472.600
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 8A 00 00 ,Success,00:00:08.473.600
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.474.600
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.571.500
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B7 00 00 ,Success,00:00:08.572.600
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8B 00 00 ,Success,00:00:08.573.600
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.574.600
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.671.500
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B9 00 00 ,Success,00:00:08.672.600
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 81 00 00 ,Success,00:00:08.673.600
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.674.600
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.771.500
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B8 00 00 ,Success,00:00:08.772.700
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CD 09 60 0E 8A 00 00 ,Success,00:00:08.773.700
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.774.700
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.871.600
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B9 00 00 ,Success,00:00:08.872.700
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 88 00 00 ,Success,00:00:08.873.700
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.874.700
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:08.971.600
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B7 00 00 ,Success,00:00:08.972.700
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 90 00 00 ,Success,00:00:08.973.700
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:08.974.700
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.071.600
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B6 00 00 ,Success,00:00:09.072.700
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 81 00 00 ,Success,00:00:09.073.700
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.074.700
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.171.600
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B7 00 00 ,Success,00:00:09.172.700
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 85 00 00 ,Success,00:00:09.173.700
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.174.700
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.271.600
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B7 00 00 ,Success,00:00:09.272.800
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 87 00 00 ,Success,00:00:09.273.700
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.274.800
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.371.700
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B6 00 00 ,Success,00:00:09.372.800
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8B 00 00 ,Success,00:00:09.373.800
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.374.800
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.471.700
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B8 00 00 ,Success,00:00:09.472.800
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 88 00 00 ,Success,00:00:09.473.800
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.474.800
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.571.700
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B8 00 00 ,Success,00:00:09.572.800
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CC 09 60 0E 87 00 00 ,Success,00:00:09.573.800
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.574.800
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.671.700
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B8 00 00 ,Success,00:00:09.672.800
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 87 00 00 ,Success,00:00:09.673.800
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.674.800
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.771.700
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B6 00 00 ,Success,00:00:09.772.800
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8A 00 00 ,Success,00:00:09.773.800
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.774.900
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.871.700
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B8 00 00 ,Success,00:00:09.872.900
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CD 09 60 0E 8A 00 00 ,Success,00:00:09.873.900
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.874.900
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:09.971.800
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B7 00 00 ,Success,00:00:09.972.900
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8E 00 00 ,Success,00:00:09.973.900
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:09.974.900
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.071.800
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B8 00 00 ,Success,00:00:10.072.900
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8E 00 00 ,Success,00:00:10.073.900
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.074.900
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.171.800
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B8 00 00 ,Success,00:00:10.172.900
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8D 00 00 ,Success,00:00:10.173.900
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.174.900
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.271.800
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B9 00 00 ,Success,00:00:10.272.900
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CD 09 60 0E 88 00 00 ,Success,00:00:10.273.900
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.274.900
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.371.800
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B8 00 00 ,Success,00:00:10.373.000
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 85 00 00 ,Success,00:00:10.374.000
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.375.000
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.471.900
+CAN2,Receive,Extended,Data,0x0A010002,8,12 60 00 00 11 B6 00 00 ,Success,00:00:10.473.000
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 87 00 00 ,Success,00:00:10.474.000
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.475.000
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.571.900
+CAN2,Receive,Extended,Data,0x0A010002,8,12 61 00 00 11 B8 00 00 ,Success,00:00:10.573.000
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CF 09 60 0E 88 00 00 ,Success,00:00:10.574.000
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.575.000
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.671.900
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B8 00 00 ,Success,00:00:10.673.000
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8A 00 00 ,Success,00:00:10.674.000
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.675.000
+CAN2,Receive,Extended,Data,0x0A010001,2,00 00 ,Success,00:00:10.771.900
+CAN2,Receive,Extended,Data,0x0A010002,8,12 62 00 00 11 B8 00 00 ,Success,00:00:10.773.000
+CAN2,Receive,Extended,Data,0x0A010003,8,2F CE 09 60 0E 8A 00 00 ,Success,00:00:10.774.000
+CAN2,Receive,Extended,Data,0x1A01000B,8,00 00 00 08 00 00 00 00 ,Success,00:00:10.775.000

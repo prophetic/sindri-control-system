@@ -54,6 +54,48 @@ void WINAPI GetDataCallback(uint32_t DevIndex,uint32_t CANIndex,uint32_t Len)
 }
 #endif
 
+// Used to do stuff with the ReadData function
+void ParseData(VCI_CAN_OBJ pCAN_ReceiveData){
+  int FrameID = pCAN_ReceiveData.ID;
+
+  // printf("FrameID: %x\n\n", FrameID);
+
+  int Frame_last = FrameID & 0x0000000f; // Grabs the last bit
+
+  // printf("Frame_last: %x", Frame_last);
+  // Check the last frame to see what we are getting
+  if (Frame_last == 0x01)
+  {
+    printf("Frame Last = 1\n");
+    // Not sure what this ID is, printing anyway
+    int id = (pCAN_ReceiveData.Data[0] << 8) | pCAN_ReceiveData.Data[1];
+    printf("ID 1: %d\n\n", id);
+
+  } else if (Frame_last == 0x02)
+  {
+    // Grab the voltage and current in/out
+    float v_in  = ((pCAN_ReceiveData.Data[0] << 8) | (pCAN_ReceiveData.Data[1]))/100.0;
+    float i_in  = ((pCAN_ReceiveData.Data[2] << 8) | (pCAN_ReceiveData.Data[3]))/100.0;
+    float v_out = ((pCAN_ReceiveData.Data[4] << 8) | (pCAN_ReceiveData.Data[5]))/100.0;
+    float i_out = ((pCAN_ReceiveData.Data[6] << 8) | (pCAN_ReceiveData.Data[7]))/100.0;
+
+    printf("Input Voltage: %f V\n", v_in);
+    printf("Input Current: %f A\n", i_in);
+    printf("Output Voltage: %f V\n", v_out);
+    printf("Output Current: %f A\n\n", i_out);
+
+  } else if (Frame_last == 0x03)
+  {
+    float power_supply = ((pCAN_ReceiveData.Data[0] << 8) | (pCAN_ReceiveData.Data[1]))/1000.0;
+    float coolant_temp = ((pCAN_ReceiveData.Data[2] << 8) | (pCAN_ReceiveData.Data[3]))/100.0;
+    float internal_temp =((pCAN_ReceiveData.Data[4] << 8) | (pCAN_ReceiveData.Data[5]))/100.0;
+
+    printf("Internal Power Supply %f V\n", power_supply);
+    printf("Coolant Temp %f C\n", coolant_temp);
+    printf("Internal Temp %f C\n\n", internal_temp);
+  }
+}
+
 // CAN READ DATA
 void ReadData()
 {
@@ -64,28 +106,9 @@ void ReadData()
       // printf("DataNum: %i\n", DataNum);
     if((DataNum > 0)&&(pCAN_ReceiveData != NULL)){
     ReadDataNum = VCI_Receive(VCI_USBCAN2, 0, can_index, pCAN_ReceiveData, DataNum);
-    for (int i = 0; i < ReadDataNum; i++)
-    {
-      printf("\n");
-      printf("--CAN_ReceiveData.RemoteFlag = %d\n",pCAN_ReceiveData[i].RemoteFlag);
-      printf("--CAN_ReceiveData.ExternFlag = %d\n",pCAN_ReceiveData[i].ExternFlag);
-      printf("--CAN_ReceiveData.ID = 0x%X\n",pCAN_ReceiveData[i].ID);
-      printf("--CAN_ReceiveData.DataLen = %d\n",pCAN_ReceiveData[i].DataLen);
-      printf("--CAN_ReceiveData.Data:");
-      for(int j=0;j<pCAN_ReceiveData[i].DataLen;j++){
-        printf("%02X ",pCAN_ReceiveData[i].Data[j]);
-      }
-      printf("\n");
-      printf("--CAN_ReceiveData.TimeStamp = %d\n\n",pCAN_ReceiveData[i].TimeStamp);
-    }
+    for (int i = 0; i < ReadDataNum; i++){ParseData(pCAN_ReceiveData[i]);}
   }
   free(pCAN_ReceiveData);
-}
-
-
-void ParseData(VCI_CAN_OBJ pCAN_ReceiveData){
-
-
 }
 
 // CAN SEND DATA

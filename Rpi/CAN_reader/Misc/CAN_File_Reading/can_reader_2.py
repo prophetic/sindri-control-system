@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from functools import reduce
 
-df = pd.read_csv("../CAN_DATA/take1.csv")
+df = pd.read_csv("../CAN_DATA/take2.csv")
 
 # print(df)
 

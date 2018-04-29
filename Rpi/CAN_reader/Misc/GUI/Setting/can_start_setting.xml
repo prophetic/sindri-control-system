@@ -2,7 +2,7 @@
 <StartSettings>
     <DevType>0</DevType>
     <WorkMode>0</WorkMode>
-    <CANIndex>2</CANIndex>
+    <CANIndex>1</CANIndex>
     <BaudRate>5</BaudRate>
     <RelayMode>0</RelayMode>
 </StartSettings>
