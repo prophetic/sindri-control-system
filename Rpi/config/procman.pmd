@@ -1,0 +1,20 @@
+cmd "0-test" {
+    exec = "echo Hello World";
+    host = "localhost";
+}
+
+cmd "1-test2" {
+    exec = "echo Hello World 2";
+    host = "localhost";
+}
+
+
+script "run-test" {
+    start cmd "0-test";
+    wait ms 1000;
+    start cmd "1-test2";
+    wait ms 1000;
+    start cmd "0-test";
+    wait ms 1000;
+    start cmd "1-test2";
+}
