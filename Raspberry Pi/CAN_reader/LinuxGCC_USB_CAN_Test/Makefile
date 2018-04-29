@@ -5,10 +5,10 @@ CFLAGS = -Wall
 # Macro definition
 DEFS = -D OS_UNIX
 CFLAGS += $(DEFS)
-# The target file  
-TARGET = USB_CAN_Test
+# The target file
+TARGET = can_read_test
 # The source file
-SRCS = USB_CAN_Test.cpp 
+SRCS = sindri_can_reader.cpp 
 # The header file search path
 INC = -I./
 # Dependent libraries,Select library file According to the operating system you using

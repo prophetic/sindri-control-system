@@ -29,11 +29,13 @@
 
 #define	CAN_MODE_LOOP_BACK		0
 #define	CAN_SEND_DATA			0
-#define CAN_GET_BOARD_INFO		1
+#define CAN_GET_BOARD_INFO		0
 #define CAN_READ_DATA			1
-#define CAN_CALLBACK_READ_DATA	1
+#define CAN_CALLBACK_READ_DATA	0
 #define	CAN_INIT_EX				1
-#define CAN_GET_STATUS			1
+#define CAN_GET_STATUS			0
+
+#define CANIndex 1
 
 
 #if CAN_CALLBACK_READ_DATA
@@ -41,10 +43,10 @@ void WINAPI GetDataCallback(uint32_t DevIndex,uint32_t CANIndex,uint32_t Len)
 {
     printf("GetDataCallback\n");
     int ReadDataNum;
-	int DataNum = VCI_GetReceiveNum(VCI_USBCAN2, 0, 0);
+	int DataNum = VCI_GetReceiveNum(VCI_USBCAN2, 0, CANIndex);
 	VCI_CAN_OBJ	*pCAN_ReceiveData = (VCI_CAN_OBJ *)malloc(DataNum*sizeof(VCI_CAN_OBJ));
     if((DataNum > 0)&&(pCAN_ReceiveData != NULL)){
-        ReadDataNum = VCI_Receive(VCI_USBCAN2, 0, 0, pCAN_ReceiveData, DataNum);
+        ReadDataNum = VCI_Receive(VCI_USBCAN2, 0, CANIndex, pCAN_ReceiveData, DataNum);
         for (int i = 0; i < ReadDataNum; i++)
         {
 			printf("\n");
@@ -111,16 +113,16 @@ int main(void)
 #endif
     //CAN baud rate = 36MHz/(CAN_BRP)/(CAN_SJW+CAN_BS1+CAN_BS2)
     //1Mbps
-    CAN_InitEx.CAN_BRP = 4;//6;
-    CAN_InitEx.CAN_BS1 = 1;//3;
-    CAN_InitEx.CAN_BS2 = 1;//2;
-    CAN_InitEx.CAN_SJW = 12;
+    CAN_InitEx.CAN_BRP = 12;//6;
+    CAN_InitEx.CAN_BS1 = 3;//3;
+    CAN_InitEx.CAN_BS2 = 2;//2;
+    CAN_InitEx.CAN_SJW = 1;
 
     CAN_InitEx.CAN_NART = 0;
     CAN_InitEx.CAN_RFLM = 0;
     CAN_InitEx.CAN_TXFP = 1;
-	CAN_InitEx.CAN_RELAY = 0;
-    Status = VCI_InitCANEx(VCI_USBCAN2,0,0,&CAN_InitEx);
+	  CAN_InitEx.CAN_RELAY = 0;
+    Status = VCI_InitCANEx(VCI_USBCAN2,0,CANIndex,&CAN_InitEx);
     if(Status==STATUS_ERR){
         printf("Init device failed!\n");
         printf("Status Err: %i\n", Status);
@@ -132,7 +134,7 @@ int main(void)
 	VCI_FILTER_CONFIG CAN_FilterConfig;
     CAN_FilterConfig.FilterIndex = 0;
     CAN_FilterConfig.Enable = 1;		//Enable
-    CAN_FilterConfig.ExtFrame = 0;
+    CAN_FilterConfig.ExtFrame = 1;
     CAN_FilterConfig.FilterMode = 0;
     CAN_FilterConfig.ID_IDE = 0;
     CAN_FilterConfig.ID_RTR = 0;
@@ -140,7 +142,7 @@ int main(void)
     CAN_FilterConfig.MASK_IDE = 0;
     CAN_FilterConfig.MASK_RTR = 0;
     CAN_FilterConfig.MASK_Std_Ext = 0;
-    Status = VCI_SetFilter(VCI_USBCAN2,0,0,&CAN_FilterConfig);
+    Status = VCI_SetFilter(VCI_USBCAN2,0,CANIndex,&CAN_FilterConfig);
     if(Status==STATUS_ERR){
         printf("Set filter failed!\n");
         return 0;
@@ -153,10 +155,10 @@ int main(void)
 	CAN_Init.AccCode = 0x00000000;
 	CAN_Init.AccMask = 0xFFFFFFFF;
 	CAN_Init.Filter = 1;
-	CAN_Init.Mode = 0;
+	CAN_Init.Mode = 1;
 	CAN_Init.Timing0 = 0x00;
-	CAN_Init.Timing1 = 0x14;
-    Status = VCI_InitCAN(VCI_USBCAN2,0,0,&CAN_Init);
+	CAN_Init.Timing1 = 0x1C;
+    Status = VCI_InitCAN(VCI_USBCAN2,0,CANIndex,&CAN_Init);
     if(Status==STATUS_ERR){
         printf("Init device failed!\n");
         return 0;
@@ -169,7 +171,7 @@ int main(void)
 	VCI_RegisterReceiveCallback(0,GetDataCallback);
 #endif
     //Start CAN
-    Status = VCI_StartCAN(VCI_USBCAN2,0,0);
+    Status = VCI_StartCAN(VCI_USBCAN2,0,CANIndex);
     if(Status==STATUS_ERR){
         printf("Start CAN failed!\n");
         return 0;
@@ -196,7 +198,7 @@ int main(void)
     Status = VCI_Transmit(VCI_USBCAN2,0,0,CAN_SendData,2);
     if(Status==STATUS_ERR){
         printf("Send CAN data failed!\n");
-        VCI_ResetCAN(VCI_USBCAN2,0,0);
+        VCI_ResetCAN(VCI_USBCAN2,0,CANIndex);
     }else{
         printf("Send CAN data success!\n");
     }
@@ -209,7 +211,7 @@ int main(void)
 #endif
 #if CAN_GET_STATUS
             VCI_CAN_STATUS CAN_Status;
-            Status = VCI_ReadCANStatus(VCI_USBCAN2, 0, 0, &CAN_Status);
+            Status = VCI_ReadCANStatus(VCI_USBCAN2, 0, CANIndex, &CAN_Status);
             if (Status == STATUS_ERR)
             {
                 printf("Get CAN status failed!\n");
@@ -261,14 +263,14 @@ int main(void)
 
 #if CAN_READ_DATA
 	while(1){
-        printf("Reading data... \n");
+    // printf("Reading data... \n");
 		int ReadDataNum;
-		int DataNum = VCI_GetReceiveNum(VCI_USBCAN2, 0, 0);
+		int DataNum = VCI_GetReceiveNum(VCI_USBCAN2, 0, CANIndex);
 		VCI_CAN_OBJ	*pCAN_ReceiveData = (VCI_CAN_OBJ *)malloc(DataNum*sizeof(VCI_CAN_OBJ));
 
-        printf("DataNum: %i\n", DataNum);
-        if((DataNum > 0)&&(pCAN_ReceiveData != NULL)){
-			ReadDataNum = VCI_Receive(VCI_USBCAN2, 0, 0, pCAN_ReceiveData, DataNum);
+        // printf("DataNum: %i\n", DataNum);
+      if((DataNum > 0)&&(pCAN_ReceiveData != NULL)){
+			ReadDataNum = VCI_Receive(VCI_USBCAN2, 0, CANIndex, pCAN_ReceiveData, DataNum);
 			for (int i = 0; i < ReadDataNum; i++)
 			{
 				printf("\n");
@@ -298,7 +300,7 @@ int main(void)
 	usleep(10*1000);
 #endif
 	//Stop receive can data
-	Status = VCI_ResetCAN(VCI_USBCAN2,0,0);
+	Status = VCI_ResetCAN(VCI_USBCAN2,0,CANIndex);
 	printf("VCI_ResetCAN %d\n",Status);
 	VCI_CloseDevice(VCI_USBCAN2,0);
 	printf("VCI_CloseDevice\n");

@@ -2,7 +2,7 @@
 <CANSettings>
     <CANIndex Index="0">
         <DevType>0</DevType>
-        <WorkMode>1</WorkMode>
+        <WorkMode>0</WorkMode>
         <BusOff>0</BusOff>
         <Retransmission>1</Retransmission>
         <RelayMode>0</RelayMode>
