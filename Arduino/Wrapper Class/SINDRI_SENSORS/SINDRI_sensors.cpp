@@ -241,3 +241,39 @@ void Thermocouple::log_data()
     Serial.print("\n");
 }
 
+// in-line temperature sensors
+Inline_temp_sensor::Inline_temp_sensor(int pin) :
+{
+    _pin = pin;
+}
+
+void Inline_temp_sensor::begin()
+{
+    time = millis();
+
+    Serial.print("In-line temperature sensor at pin: ");
+    Serial.print(_pin);
+    Serial.print(" Initialized!\n");
+}
+
+void Inline_temp_sensor::update_sensor()
+{
+    float R = 267.0; // Ohms
+
+    float val = analogRead(_pin);
+    float V = val*(5.0/1024.0); // map the voltage between 0 and 5V
+    float I = V/R; // Convert to current using the loop resistance
+
+    current_reading =  0.0625*I*1e5 - 0.2;
+    time = millis();
+}
+
+void Inline_temp_sensor::log_data()
+{
+    Serial.print(_pin);
+    Serial.print(",");
+    Serial.print(current_reading);
+    Serial.print(",");
+    Serial.print(time);
+    Serial.print("\n");
+}
