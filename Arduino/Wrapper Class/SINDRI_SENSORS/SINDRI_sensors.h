@@ -128,4 +128,19 @@ class Thermocouple
         int _CS;
 };
 
+class Inline_temp_sensor
+{
+    public: 
+        Inline_temp_sensor(int pin);
+        unsigned long time;
+        float current_reading = 0.0;
+
+        void begin();
+        void update_sensor();
+        void log_data();
+
+    private:
+        int _pin;
+};
+
 #endif // SENSORS_H
